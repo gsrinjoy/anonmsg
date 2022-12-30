@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from mer import urls
+from api import  urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('mer.urls'))
+    # path('',include('mer.urls')),
+    path('api/',include('api.urls')),
     
 ]
